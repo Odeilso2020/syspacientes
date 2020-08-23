@@ -10,7 +10,7 @@
     //Validar Login
     $sql = "SELECT id, email, senha FROM usuarios WHERE email = '$email'";
     $resp = mysqli_query($conexao_bd, $sql);
-    if($rows = mysqli_fetch_row($resp)) //Meio que criando um array com as informações
+    if($rows=mysqli_fetch_row($resp)) //Meio que criando um array com as informações
     {
         echo $rows[0]." | ".$rows[1]." | ".$rows[2];
     }
