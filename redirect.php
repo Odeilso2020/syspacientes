@@ -1,6 +1,6 @@
 <?php
-    require_once("variaveis.php"); //Faz a ligação com a outra pagina
-    require_once("conexao.php");
+    require_once('variaveis.php'); //Faz a ligação com a outra pagina
+    require_once('conexao.php');
 
     $email = $_POST["inputEmail"];
     $senha = $_POST["inputPassword"];
@@ -12,8 +12,7 @@
     $resp = mysqli_query($conexao_bd, $sql);
     if($rows=mysqli_fetch_row($resp)) //Meio que criando um array com as informações
     {
-        alert("teste");
-        echo $rows[0]." | ".$rows[1]." | ".$rows[2];
+        echo $rows[0] . " | " . $rows[1] . " | ".$rows[2];
     }
     mysqli_close($conexao_bd);
 
