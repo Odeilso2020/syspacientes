@@ -2,7 +2,7 @@
     $conexao_bd = mysqli_connect(
         "localhost", 
         "root", 
-        "123odeilso@",
+        "123456",
         "syspacientes"
     );
 
