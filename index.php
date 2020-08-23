@@ -25,6 +25,8 @@
     /*$nome = $_GET["nome"];
     $sobrenome = $_GET["sobrenome"];
     echo "O Nome é: ".$nome." ".$sobrenome;*/
+
+    $erro = $_GET["erro"];
 ?>
 
 <!DOCTYPE html>
