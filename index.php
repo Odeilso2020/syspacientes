@@ -29,7 +29,7 @@
     $erro = $_GET["erro"];
     if(strlength($erro) > 0)
     {
-        $onload = "onload = 'alert(\' $erro \')'";
+        $onload = "onload = 'alert(\" $erro \")'";
     }
 ?>
 
