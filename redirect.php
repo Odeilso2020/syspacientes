@@ -19,7 +19,7 @@
         }else
         {
             $erro = "Credenciais inválidas!";
-            $validou - false;
+            $validou = false;
         }
     }
     mysqli_close($conexao_bd);
