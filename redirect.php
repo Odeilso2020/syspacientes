@@ -8,11 +8,11 @@
     $erro = "";
 
     //Validar Login
-    $sql = "SELECT * FROM usuarios WHERE email = '$email'";
+    $sql = "SELECT id, email, senha FROM usuarios WHERE email = '$email'";
     $resp = mysqli_query($conexao_bd, $sql);
     if($rows = mysqli_fetch_row($resp)) //Meio que criando um array com as informações
     {
-        echo $rows[o]." | ".$rows[1]." | ".$rows[2];
+        echo $rows[0]." | ".$rows[1]." | ".$rows[2];
     }
     mysqli_close($conexao_bd);
 
