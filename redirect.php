@@ -11,7 +11,7 @@
         $validou = false;
     }else if(strlen($senha) >= 7)
     {
-        $erro = echo "Senha maior que 6 caracteres";
+        $erro = "Senha maior que 6 caracteres";
         $validou = false;
     } 
     
