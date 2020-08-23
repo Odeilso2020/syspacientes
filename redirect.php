@@ -8,7 +8,7 @@
         echo "Senha menor que 6 caracteres";
     }else if(strlen($senha) >= 7)
     {
-        echo "Senha maior que 6 caracteres"
+        echo "Senha maior que 6 caracteres";
     }
     echo "<hr>";
     echo "E-mail: ".$email."<br>";
