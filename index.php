@@ -27,7 +27,7 @@
     echo "O Nome é: ".$nome." ".$sobrenome;*/
     $onload = "";
     $erro = $_GET["erro"];
-    if(strlength($erro) > 0)
+    if(strlen($erro) > 0)
     {
         $onload = "onload = 'alert(\" $erro \")'";
     }
