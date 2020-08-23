@@ -7,17 +7,15 @@
     $validou = true;
     $erro = "";
 
-    //Validar Senha
-    if(strlen($senha) < 6)
+    //Validar Login
+    $sql = "SELECT * FROM usuarios WHERE email = '$email'";
+    $resp = mysqli_query($conexao_bd, $sql);
+    if($rows = mysqli_fetch_row($resp)) //Meio que criando um array com as informações
     {
-        $erro = "Senha menor que 6 caracteres";
-        $validou = false;
-    }else if(strlen($senha) >= 7)
-    {
-        $erro = "Senha maior que 6 caracteres";
-        $validou = false;
-    } 
-    
+        echo $rows[o]." | ".$rows[1]." | ".$rows[2];
+    }
+    mysqli_close($conexao_bd);
+
     //Exibir ou Retornar
     if($validou)
     {
