@@ -29,7 +29,7 @@
 
     <link href="css/navbar.css" rel="stylesheet">
      -->
-     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <link rel="icon" href="img/favicon/favicion1.ico">
 </head>
