@@ -25,7 +25,7 @@
     <link rel="icon" href="img/favicon2.ico">
     
     <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap core CSS -->
-    <link href="navbar.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
     <!-- Fim -->
     
     <link rel="icon" href="img/favicon/favicion1.ico">
