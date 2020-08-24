@@ -20,6 +20,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SysPacientes - ADM</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/navbar/">
 
     <!-- Modificação para exercicio Inicio -->
     <link rel="icon" href="img/favicon2.ico">
