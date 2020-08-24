@@ -22,15 +22,15 @@
     <title>SysPacientes - ADM</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/navbar/">
 
-    <!-- Modificação para exercicio Inicio -->
+    <!-- Modificação para exercicio Inicio
     
-    <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="css/navbar.css" rel="stylesheet">
-    <!-- Fim -->
-    
+     -->
+     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <link rel="icon" href="img/favicon/favicion1.ico">
 </head>
 <body>
