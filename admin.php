@@ -26,6 +26,8 @@
     
     <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="css/navbar.css" rel="stylesheet">
     <!-- Fim -->
     
