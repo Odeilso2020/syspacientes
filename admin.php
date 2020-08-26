@@ -13,13 +13,13 @@
     }
     mysqli_close($conexao_bd);
 ?>
-  
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <!-- CSS only -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/bootstrap.css"/>
         
         <!-- JS, Popper.js, and jQuery -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -85,7 +85,7 @@
                     </div>
                 </nav>
                 <div class="jumbotron">
-                    <h1>Navbar example</h1>
+                    <h1><?php echo "Usuário: " . $id_usuario ?></h1>
                     <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
                     <p>
                         <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
