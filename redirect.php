@@ -6,11 +6,13 @@
     $senha = $_POST["inputPassword"];
 
     // Validando Variaveis
+    // O trim tira os espaços da esquerda e da direita
     if(strlen(trim($email)) == 0 && strlen(trim($senha)) == 0)
     {
         header("location: index.php");
     }
     exit();
+    
     // Iniciando Sessão
     session_start();
     $_SESSION["id_usuario"] = 0;
