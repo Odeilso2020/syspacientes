@@ -5,6 +5,12 @@
     $email = $_POST["inputEmail"];
     $senha = $_POST["inputPassword"];
 
+    // Validando Variaveis
+    if(strlen($email) == 0 && strlen($senha) == 0)
+    {
+        header("location: index.php");
+    }
+
     // Iniciando Sessão
     session_start();
     $_SESSION["id_usuario"] = 0;
