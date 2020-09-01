@@ -10,7 +10,7 @@
     {
         header("location: index.php");
     }
-
+    exit();
     // Iniciando Sessão
     session_start();
     $_SESSION["id_usuario"] = 0;
