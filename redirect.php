@@ -6,7 +6,7 @@
     $senha = $_POST["inputPassword"];
 
     // Validando Variaveis
-    if(strlen($email) == 0 && strlen($senha) == 0)
+    if(strlen(trim($email)) == 0 && strlen(trim($senha)) == 0)
     {
         header("location: index.php");
     }
