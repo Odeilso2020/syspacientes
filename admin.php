@@ -1,8 +1,10 @@
 <?php
+    session_start();
     require_once('variaveis.php');
     require_once('conexao.php');
 
     $id_usuario = $_GET["id_usuario"];
+    $id_usuario_session = $_SESSION["id_usuario"];
     $nome_usuario = "";
 
     $sql = "SELECT nome FROM usuarios WHERE id=" . $id_usuario;
@@ -82,7 +84,7 @@
                 </nav>
                 <div class="jumbotron">
                     <h1><?php echo "Usuário: " . $nome_usuario ?></h1>
-                    <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+                    <p>Sessão: <?php echo($id_usuario_session); ?></p>
                     <p>
                         <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
                     </p>
