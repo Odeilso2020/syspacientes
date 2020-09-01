@@ -35,10 +35,11 @@
     //Exibir ou Retornar
     if($validou)
     {
-        echo "<hr>";
+        /*echo "<hr>";
         echo "E-mail: ".$email."<br>";
-        echo "Senha: ".$senha;
-        header("location:admin.php?id_usuario=$id_usuario");
+        echo "Senha: ".$senha;*/
+        $_SESSION["id_usuario"] = $id_usuario;
+        header("location:admin.php");
     }else{
         header("location:index.php?erro=$erro");
     }
