@@ -18,9 +18,12 @@
 </head>
 <body>
     <?php 
-        echo("Nome: ".$nome); 
+        echo("Nome: ".$nome);
+        echo("<hr>"); 
         echo("E-mail: ".$email);
+        echo("<hr>"); 
         echo("Senha: ".$senha);
+        echo("<hr>"); 
         echo("ID: ".$id);
     ?>
 </body>
