@@ -41,11 +41,11 @@
             </div>
             <div class="form-group">
                 <label for="inputEmail">E-mail: </label>
-                <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="E-mail">
+                <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="E-mail" value="<?php echo($emailUsuario); ?>">
             </div>
             <div class="form-group">
                 <label for="inputPassword">Senha</label>
-                <input type="text" class="form-control" id="inputPassword" name="inputPassword">
+                <input type="text" class="form-control" id="inputPassword" name="inputPassword" value="<?php echo($senhaUsuario); ?>"> 
             </div>
             <button type="submit" class="btn btn-primary">Gravar</button>
         </form>
