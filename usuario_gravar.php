@@ -12,5 +12,5 @@
     mysqli_close($conexao_bd);
 
     echo "<script>alert('Alteração Concluida!');</script>";   
-    header("location: admin.php");
+    //header("location: admin.php");
 ?>
