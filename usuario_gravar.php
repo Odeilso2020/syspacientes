@@ -11,5 +11,6 @@
     $resp = mysqli_query($conexao_bd, $sql);
     mysqli_close($conexao_bd);
 
-    header("location: admin.php"); 
+    header("location: admin.php");
+    echo("alert('Dados modificados com sucesso!');");
 ?>
