@@ -97,16 +97,16 @@
                     <p>
                         <!-- Listar tudo do BD -->
                         <table border='1'>
-                            <th>
+                            <tr>
                                 <td>Nome do Usuário</td>
                                 <td>...</td>
-                            </th>
+                            </tr>
                             <?php
                                 $sql = "SELECT id, nome FROM usuarios ORDER BY Nome";
                                 $resp = mysqli_query($conexao_bd, $sql);
                                 while($rows=mysqli_fetch_row($resp))
                                 {
-                                    $idUsuario = $rows[0]
+                                    $idUsuario = $rows[0];
                                     $nomeUsuario = $rows[1];
                                     echo("<tr>");
                                     echo("<td>$nomeUsuario</td>");
