@@ -12,7 +12,7 @@
     // Validar se Codigo do Usuario esta na sessão
     if(strlen($id_usuario) == 0)
     {
-        header("location: index.php");
+        header("location: index.php"); 
     }
 
     $sql = "SELECT nome FROM usuarios WHERE id=" . $id_usuario;
