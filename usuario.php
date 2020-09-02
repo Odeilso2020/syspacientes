@@ -1,9 +1,9 @@
 <?php
     session_start();
-    require_once("variaveis.php");
-    require_once("conexao.php");
+    require_once('variaveis.php');
+    require_once('conexao.php');
 
-    $idUsuario = $_GET("idUsuario");
+    $idUsuario = $_GET["idUsuario"];
 ?>
 
 <!DOCTYPE html>
