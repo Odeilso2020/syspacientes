@@ -27,11 +27,11 @@
             </div>
             <div class="form-group">
                 <label for="inputEmail">E-mail: </label>
-                <input type="email" class="form-control" id="inputEmail" name="inputEmail" aria-describedby="emailHelp" placeholder="E-mail">
+                <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="E-mail">
             </div>
             <div class="form-group">
-                 <label for="inputPassword">Senha</label>
-                <input type="text" class="form-control" id="inputPassword" names="inputPassword">
+                <label for="inputPassword">Senha</label>
+                <input type="text" class="form-control" id="inputPassword" name="inputPassword">
             </div>
             <button type="submit" class="btn btn-primary">Gravar</button>
         </form>
