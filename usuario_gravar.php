@@ -10,6 +10,6 @@
     $sql = "UPDATE usuarios SET nome = '$nome', email = '$email', senha = '$senha' where id = '$id'";
     $resp = mysqli_query($conexao_bd, $sql);
     mysqli_close($conexao_bd);
-    
-    header("location: admin.php"."<script>alert('Alteração Concluida!');</script>");
+
+    header("location: admin.php");
 ?>
