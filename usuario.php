@@ -31,9 +31,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Editando o Usuário <?php echo($nomeUsuario); ?></h1>
-    <hr>
     <div class="container">
+        <h1>Editando o Usuário: <?php echo($nomeUsuario); ?></h1>
+        <hr>
         <form
             method="post"
             action="usuario_gravar.php"
