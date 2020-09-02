@@ -21,7 +21,6 @@
     {
         $nome_usuario = $rows[0];
     }
-    mysqli_close($conexao_bd);
 ?>
 
 <!DOCTYPE html>
@@ -96,7 +95,27 @@
                         <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
                     </p>
                     <p>
-                        <a class="btn btn-lg btn-success" href="usuario.php" role="button">Editar Usuário</a>
+                        <!-- Listar tudo do BD -->
+                        <table border='1'>
+                            <th>
+                                <td>Nome do Usuário</td>
+                                <td>...</td>
+                            </th>
+                            <?php
+                                $sql = "SELECT id, nome FROM usuarios ORDER BY Nome";
+                                $resp = mysqli_query($conexao_bd, $sql);
+                                while($rows=mysqli_fetch_row($resp))
+                                {
+                                    $idUsuario = $rows[0]
+                                    $nomeUsuario = $rows[1];
+                                    echo("<tr>");
+                                    echo("<td>$nomeUsuario</td>");
+                                    echo("<td><a class='btn btn-lg btn-success' href='logout.php?idUs=$idUsuario' role='button'>...</a></td>")
+                                    echo("</tr>");
+                                }
+                            ?>
+                        </table>
+                        <!-- <a class="btn btn-lg btn-success" href="usuario.php" role="button">Editar Usuário</a> -->
                     </p>
                     <p>
                         <a class="btn btn-lg btn-danger" href="logout.php" role="button">Sair</a>
@@ -104,5 +123,8 @@
                 </div>
             </div>
         </div>
+        <?php
+            mysqli_close($conexao_bd);
+        ?>
     </body>
 </html>
