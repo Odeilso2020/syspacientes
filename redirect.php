@@ -11,7 +11,7 @@
     {
         header("location: index.php");
     }
-
+    
     // Iniciando Sessão
     session_start();
     $_SESSION["id_usuario"] = 0;

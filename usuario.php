@@ -3,7 +3,7 @@
     require_once("variaveis.php");
     require_once("conexao.php");
 
-    
+     
 ?>
 
 <!DOCTYPE html>
