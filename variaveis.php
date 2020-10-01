@@ -1,4 +1,4 @@
- <?php
-    // Variaveis globais
-    global $conexao_bd;
- ?>
+<?php
+   global $conexao_bd;
+
+?>

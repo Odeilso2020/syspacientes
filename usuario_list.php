@@ -6,8 +6,7 @@
    //$id_usuario = $_GET["id_usuario"];
    
    //recuperando dados da sessao
-   $id_usuario   = $_SESSION["id_usuario"]; 
-   $tipoAcesso   = $_SESSION["tipo_acesso"]; 
+   $id_usuario   = $_SESSION["id_usuario"];   
    $nome_usuario = "";
 
    //validar se codigo do usuario esta na sesao
@@ -42,30 +41,24 @@
 
       <!-- Static navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-        <a class="navbar-brand" href="admin.php">SysPacientes</a>
+        <a class="navbar-brand" href="#">SysPacientes</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarsExample09">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="nav-link" href="admin.php">Home <span class="sr-only">(current)</span></a>
             </li>
-            <?php 
-            if($tipoAcesso != 3) {
-            ?>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastros</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown09">
-                  <a class="dropdown-item" href="pessoas_list.php">Cadastro de pessoas</a>
-                  <a class="dropdown-item" href="usuario_list2.php">Cadastro de usuários</a>                
-                  <a class="dropdown-item" href="#">Cadastro de pacientes</a>
-                </div>
-              </li>
-            <?php
-            }
-            ?>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastros</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown09">
+                <a class="dropdown-item" href="#">Cadastro de pessoas</a>
+                <a class="dropdown-item" href="usuario_list.php">Cadastro de usuários</a>                
+                <a class="dropdown-item" href="#">Cadastro de pacientes</a>
+              </div>
+            </li>
           </ul>  
           <ul class="navbar-nav navbar-right">
             <li class="nav-item dropdown">
@@ -83,17 +76,39 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Sistema de Pacientes!!!</h1>
-        <p>Bem vindo <?php echo($nome_usuario); ?>.</p>        
+        <h1>Listagem de usuários:</h1>
+        <table class="table">
         <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
-        <p>
-        <!-- <a class="btn btn-lg btn-success" href="usuario.php" role="button">Editar usuário</a>-->
-        </p>
-        <p>
-         <a class="btn btn-lg btn-danger" href="logout.php" role="button">Sair</a>
-        </p>
+         <thead>
+            <tr>
+               <th scope="col">#</th>
+               <th scope="col">Nome</th>
+               <th scope="col">E-mail</th>
+               <th scope="col">...</th>
+            </tr>
+         </thead>
+         <tbody>
+            <?php
+               $sql = "SELECT id, nome, email FROM usuarios ORDER BY Nome";
+               $resp = mysqli_query($conexao_bd, $sql);
+               while($rows=mysqli_fetch_row($resp)){
+                  $idUsuario   = $rows[0];
+                  $nomeUsuario = $rows[1];
+                  $email       = $rows[2];
+                  echo("<tr>");
+                  echo("<th scope='row'>$idUsuario</td>");
+                  echo("<td>$nomeUsuario</td>");
+                  echo("<td>$email</td>");
+                  echo("<td>");
+                  echo("<a class='btn btn-lg btn-success' href='usuario.php?idUsuario=$idUsuario' role='button'>Editar</a>&nbsp;");
+                  echo("<a class='btn btn-lg btn-danger' href='usuario_excluir.php?idUsuario=$idUsuario' role='button'>Excluir</a>");
+                  echo("</td>");
+                  echo("</tr>");
+               }                
+            ?>
+         </tbody>
+        </table>
+        </p>        
       </div>
     </div>
 

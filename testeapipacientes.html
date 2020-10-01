@@ -59,23 +59,59 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Lista de usuários</h1>
+        <h1>Lista de pacientes</h1>
         <hr>
-        
-            <table class="table">
+         <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+               <a class="nav-link active" id="get-tab" data-toggle="tab" href="#get" role="tab" aria-controls="get" aria-selected="true">GET</a>
+               <a class="nav-link" id="post-tab" data-toggle="tab" href="#post" role="tab" aria-controls="post" aria-selected="false">POST</a>               
+            </div>
+         </nav>
+         <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="get" role="tabpanel" aria-labelledby="get-tab">               
+               <table class="table">
                   <thead>
                      <tr>
                         <th scope="col">idPessoa</th>
                         <th scope="col">Dt entrada</th>
                         <th scope="col">Comorbidade</th>
                         <th scope="col">Grau</th>
+                        <th scope="col">...</th>
                      </tr>
                   </thead>
-                  <tbody id="bodyTable" name="bodyTable">                     
+                  <tbody id="bodyTable" name="bodyTable">                          
                   </tbody>
-            </table>  
-            <br>
-            <a class='btn btn-lg btn-primary' href='javascript:buscarDados()' role='button'>Buscar dados</a>            
+               </table>  
+               <br>
+               <a class='btn btn-lg btn-primary' href='javascript:buscarDados2()' role='button'>Buscar dados</a>
+               <a class='btn btn-lg btn-danger'  href='javascript:limparTabela()' role='button'>Limpar tabela</a>
+            </div>
+            <div class="tab-pane fade" id="post" role="tabpanel" aria-labelledby="post-tab">
+               <form>
+                  <div class="form-group">
+                     <label for="inputIdPessoa">ID Pessoa:</label>
+                     <input type="number" class="form-control" id="inputIdPessoa" 
+                           name="inputIdPessoa" placeholder="Id pessoa">
+                  </div>
+                  <div class="form-group">
+                     <label for="inputDtEntrada">Dt Entrada:</label>
+                     <input type="text" class="form-control" id="inputDtEntrada" 
+                           name="inputDtEntrada" placeholder="Dt entrada">
+                  </div>
+                  <div class="form-group">
+                     <label for="inputComorbidade">Comorbidade:</label>
+                     <input type="text" class="form-control" id="inputComorbidade" 
+                           name="inputComorbidade" placeholder="Comorbidade">
+                  </div>
+                  <div class="form-group">
+                     <label for="inputGrau">Grau:</label>
+                     <input type="number" class="form-control" id="inputGrau" 
+                           name="inputGrau" placeholder="Grau">
+                  </div>
+                  <a class='btn btn-lg btn-success' href='javascript:gravarDados()' role='button'>Gravar</a>
+               </form>
+            </div>
+         </div>            
       </div>
     </div>
 
@@ -83,18 +119,121 @@
     <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-1.12.4.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
+      function excluirPaciente(idPaciente){
+         $.ajax({
+               url: "https://localhost:5001/api/pacientes/",
+               type: "DELETE",
+               dataType: "json",
+               contentType: "application/json",
+               data: JSON.stringify(idPaciente),
+               success: function(data){
+                  Swal.fire(
+                     'Exclusão',
+                     'Dados excluidos com sucesso!',
+                     'success'
+                  );
+               },
+               error: function(data){
+                  Swal.fire({
+                     icon: 'error',
+                     title: 'Erro ao exlcuir',
+                     text: 'Ocorreu algum erro na exclusão!'
+                  });
+               }
+            });
+      }
+
+      function gravarDados(){
+         var IdPessoa    = document.getElementById("inputIdPessoa").value;
+         var DataEntrada = document.getElementById("inputDtEntrada").value;
+         var Comorbidade = document.getElementById("inputComorbidade").value;
+         var Grau        = document.getElementById("inputGrau").value;
+         var validou     = true;
+         var mensagem    = "";
+         
+         //validações:
+         if(IdPessoa.length == 0){
+            mensagem = "Digite o id da Pessoa";
+            validou = false;
+         }
+         if(DataEntrada.length == 0 && validou){
+            mensagem = "Digite a data de entrada";
+            validou = false;
+         }
+         if(Comorbidade.length == 0 && validou){
+            mensagem = "Digite a comorbidade do paciente";
+            validou = false;
+         }
+         if(Grau.length == 0 && validou){
+            mensagem = "Digite o grau do paciente";
+            validou = false;
+         }
+         if(validou){
+            //envio
+            IdPessoa = parseInt(IdPessoa);
+            Grau     = parseInt(Grau);
+            var paciente = {
+               idPessoa: IdPessoa,
+               data_entrada: DataEntrada,
+               comorbidade: Comorbidade,
+               grau: Grau
+            }
+            $.ajax({
+               url: "https://localhost:5001/api/pacientes",
+               type: "POST",
+               dataType: "json",
+               contentType: "application/json",
+               data: JSON.stringify(paciente),
+               success: function(data){
+                  Swal.fire(
+                     'Gravação',
+                     'Dados gravados com sucesso!',
+                     'success'
+                  );
+               },
+               error: function(data){
+                  Swal.fire({
+                     icon: 'error',
+                     title: 'Erro ao gravar',
+                     text: 'Ocorreu algum erro na gravação!'
+                  });
+               }
+            });
+         }else{
+            //msm erro
+            Swal.fire({
+               icon: 'error',
+               title: 'Erro ao validar',
+               text: mensagem
+            });
+         }
+      }
+
+      function limparTabela(){
+         $('#bodyTable').empty();
+      }
+      function buscarDados2(){
+         $.getJSON("https://localhost:5001/api/pacientes", function(data){
+            for(var i = 0; i < data.length; i++){
+               var tr = $('<tr/>');               
+               $(tr).append("<td>" + data[i].idPessoa     + "</td>");
+               $(tr).append("<td>" + data[i].data_entrada + "</td>");
+               $(tr).append("<td>" + data[i].comorbidade  + "</td>");
+               $(tr).append("<td>" + data[i].grau         + "</td>");
+               $(tr).append("<td><a class='btn btn-danger' href='javascript:excluirPaciente(" + data[i].id + ")' role='button'>Excluir</a></td>");
+               $('#bodyTable').append(tr);
+            }
+         });
+      }
+
       function buscarDados(){
          $.ajax({
-            type: "POST",
-            dataType: "jsonp",
-            url: "http://localhost:5000/api/pacientes",
+            type: "GET",
+            dataType: "json",
+            url: "https://localhost:5001/api/pacientes",
             success: function(data){
-               var json = $.parseJSON(data);
-               console.log(json.html);
-            },
-            error: function(error){
-               var json = $.parseJSON(error);
-               alert(json.error);
+               //var json = $.parseJSON(data);
+               console.log(data);
             }
          }).fail(
             function(jqXHR, exception){
