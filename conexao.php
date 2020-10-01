@@ -1,8 +1,8 @@
 <?php
    $conexao_bd = mysqli_connect(
-                  "localhost",
+                  "192.168.0.109",
                   "root",
-                  "",
+                  "123odeilso@",
                   "syspacientes");
    if(!$conexao_bd){
       echo "Não foi possível conectar no banco de dados: ";
