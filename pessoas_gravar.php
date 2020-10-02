@@ -30,7 +30,7 @@
                   telefone = '$telefone',
                   celular = '$celular',
                   email = '$email'
-                 WHERE id = $idPessoa";
+                 WHERE idPessoa = $idPessoa";
       } else {
          $sql = "INSERT INTO pessoas( nome, endereco, numero, complemento, cidade, estado, cep, datanascimento, telefone, celular, email)
          VALUES('nome', '$endereco', '$numero','$complemento', '$cidade', '$estado',  '$cep', '$datanasc', '$telefone', '$celular', '$emailPessoa')";

@@ -162,7 +162,7 @@
         }
         */
         Swal.fire({
-          title: 'Deseja realmente exluir?'+idPessoa,
+          title: 'Deseja realmente exluir?',
           text: "Você deseja realmente excluir esta pessoa!",
           icon: 'warning',
           showCancelButton: true,
