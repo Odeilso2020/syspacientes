@@ -8,7 +8,7 @@
     
    //echo $idPessoa;
    if(strlen($idPessoa) > 0){
-      $sql = "DELETE FROM pessoas WHERE id =" .$idPessoa ;
+      $sql = "DELETE FROM pessoas WHERE id =" .$idPessoa;
       mysqli_query($conexao_bd, $sql);
    }
    else{
