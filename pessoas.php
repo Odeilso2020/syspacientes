@@ -108,7 +108,7 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-       // <?php
+       <?php
          //if($idUsuario != 0){
            // echo("<h1>Editando a pessoa: $nomeUsuario</h1>");
          //}else{
