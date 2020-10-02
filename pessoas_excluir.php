@@ -3,7 +3,7 @@
    require_once('variaveis.php');
    require_once('conexao.php');
 
-   $idPessoa = $GET['idPessoa'];
+   $idPessoa = $_GET['idPessoa'];
 
     
    //echo $idPessoa;
