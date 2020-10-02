@@ -10,13 +10,10 @@
    if(strlen($idPessoa) > 0){
       $sql = "DELETE FROM pessoas WHERE idPessoa =" . $idPessoa;
       mysqli_query($conexao_bd, $sql);
-      echo("entrou");
    }
    else{
       // erro
-      echo("erro");
    }
    mysqli_close($conexao_bd);
-   echo($idPessoa);
-   //header("location:pessoas_list.php");
+   header("location:pessoas_list.php");
 ?>
