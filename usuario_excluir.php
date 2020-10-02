@@ -5,11 +5,13 @@
 
    $idUsuario = $_GET['idUsuario'];
 
+   
    //verifico se é vazio:
    if(strlen($idUsuario) > 0){
       $sql = "DELETE FROM usuarios WHERE id = " .$idUsuario;
       mysqli_query($conexao_bd, $sql);
-   }else{
+   }
+   else{
       //erro!
    }
    mysqli_close($conexao_bd);

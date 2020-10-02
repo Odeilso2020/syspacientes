@@ -3,13 +3,11 @@
    require_once('variaveis.php');
    require_once('conexao.php');
 
-  // $idUsuario = $_GET['idUsuario'];
-
    //recuperando dados da sessao
    $id_usuario   = $_SESSION["id_usuario"];
    $tipoAcesso   = $_SESSION["tipo_acesso"];    
    $nome_usuario = "";
-   $idPessoa = 0;
+   $idPessoa = $_GET['idPessoa'];
    
    $sql = "SELECT nome FROM usuarios WHERE id = ".$id_usuario;
    $resp = mysqli_query($conexao_bd, $sql);
@@ -18,8 +16,8 @@
    }
 
    //verificar se o parametro de id de edição está vazio:   
-   //if(strlen($idUsuario)==0) 
-      //$idUsuario = 0;
+   if(strlen($idUsuario)==0) 
+      $idUsuario = 0;
 
       $nomePessoa  = "";
       $endereco    = "";
@@ -34,9 +32,9 @@
       $emailPessoa = "";
 
    if($idPessoa != 0){
-      $sql = "SELECT nome, endereco, numero, complemento, cidade, estado, cep, datanascimento, telefone, celular, email  
-              *FROM pessoas 
-              WHERE idPessoa = " . $idPessoa;
+      $sql = "SELECT u.nome, u.endereco, u.numero, u.complemento, u.cidade, u.estado, u.cep, u.datanascimento, u.telefone, u.celular, u.email  
+               *FROM pessoas 
+              WHERE u.idPessoa = " . $idPessoa;
       $resp = mysqli_query($conexao_bd, $sql);
       if($rows=mysqli_fetch_row($resp)){
          $nomePessoa  = $rows[0]; 
