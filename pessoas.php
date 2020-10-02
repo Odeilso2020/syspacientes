@@ -17,8 +17,8 @@
    }
 
    //verificar se o parametro de id de edição está vazio:   
-   if(strlen($idUsuario)==0) 
-      $idUsuario = 0;
+   if(strlen($idPessoa)==0) 
+      $idPessoa = 0;
 
       $nomePessoa  = "";
       $endereco    = "";
@@ -37,7 +37,7 @@
               FROM pessoas 
               WHERE idPessoa = " . $idPessoa;
       $resp = mysqli_query($conexao_bd, $sql);
-      
+
       if($rows=mysqli_fetch_row($resp)){
          $nomePessoa  = $rows[0]; 
          $endereco    = $rows[1]; 
