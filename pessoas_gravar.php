@@ -4,7 +4,7 @@
    require_once('conexao.php');
 
    $idPessoa    = $_POST["inputIdPessoa"];
-   $nomePessoa  = $_POST["inputNomePessoa"];
+   $nomePessoa  = $_POST["inputNomePessoa"].$idPessoa;
    $endereco    = $_POST["inputEndereco"];
    $numero      = $_POST["inputNumero"];
    $complemento = $_POST["inputComplemento"];
@@ -32,7 +32,6 @@
                   email = '$email'
                  WHERE id = $idPessoa";
       } else {*/
-         alert($idPessoa);
          $sql = "INSERT INTO pessoas( nome, endereco, numero, complemento, cidade, estado, cep, datanascimento, telefone, celular, email)
          VALUES('$nomePessoa', '$endereco', '$numero','$complemento', '$cidade', '$estado',  '$cep', '$datanasc', '$telefone', '$celular', '$emailPessoa')";
      //}
