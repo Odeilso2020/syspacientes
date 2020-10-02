@@ -11,6 +11,9 @@
       $sql = "DELETE FROM pessoas WHERE id =" .$idPessoa ;
       mysqli_query($conexao_bd, $sql);
    }
+   else{
+      // erro
+   }
    //verifico se é vazio:
    
   
