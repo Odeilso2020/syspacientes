@@ -32,6 +32,7 @@
                   email = '$email'
                  WHERE id = $idPessoa";
       } else {*/
+         alert($idPessoa);
          $sql = "INSERT INTO pessoas( nome, endereco, numero, complemento, cidade, estado, cep, datanascimento, telefone, celular, email)
          VALUES('$nomePessoa', '$endereco', '$numero','$complemento', '$cidade', '$estado',  '$cep', '$datanasc', '$telefone', '$celular', '$emailPessoa')";
      //}
