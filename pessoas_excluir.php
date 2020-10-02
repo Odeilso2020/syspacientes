@@ -15,7 +15,6 @@
       // erro
    }
    //verifico se é vazio:
-   
   
    mysqli_close($conexao_bd);
    header("location:pessoas_list.php");
