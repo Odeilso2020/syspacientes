@@ -3,7 +3,7 @@
    require_once('variaveis.php');
    require_once('conexao.php');
 
-   $idPessoa    = $_GET["inputIdPessoa"];
+   $idPessoa    = $_POST["inputIdPessoa"];
    $nomePessoa  = $_POST["inputNomePessoa"];
    $endereco    = $_POST["inputEndereco"];
    $numero      = $_POST["inputNumero"];
@@ -33,7 +33,7 @@
                  WHERE id = $idPessoa";
       } else {
          $sql = "INSERT INTO pessoas( nome, endereco, numero, complemento, cidade, estado, cep, datanascimento, telefone, celular, email)
-         VALUES('$idPessoa', '$endereco', '$numero','$complemento', '$cidade', '$estado',  '$cep', '$datanasc', '$telefone', '$celular', '$emailPessoa')";
+         VALUES('nome', '$endereco', '$numero','$complemento', '$cidade', '$estado',  '$cep', '$datanasc', '$telefone', '$celular', '$emailPessoa')";
      }
       
       mysqli_query($conexao_bd, $sql);
