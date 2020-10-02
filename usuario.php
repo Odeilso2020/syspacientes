@@ -17,8 +17,8 @@
    }
 
    //verificar se o parametro de id de edição está vazio:   
-   if(strlen($idUsuario)==0) 
-      $idUsuario = 0;
+   /*if(strlen($idUsuario)==0) 
+      $idUsuario = 0;*/
 
    $nomeUsuario  = "";
    $emailUsuario = "";
