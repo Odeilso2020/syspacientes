@@ -30,7 +30,9 @@
                   telefone = '$telefone',
                   celular = '$celular',
                   email = '$email'
-                 WHERE idPessoa = $idPessoa";
+                 WHERE idPessoa = '$idPessoa'";
+            echo("entrou");
+            echo($idPessoa);
       } else {
          $sql = "INSERT INTO pessoas( nome, endereco, numero, complemento, cidade, estado, cep, datanascimento, telefone, celular, email)
          VALUES('nome', '$endereco', '$numero','$complemento', '$cidade', '$estado',  '$cep', '$datanasc', '$telefone', '$celular', '$emailPessoa')";
@@ -40,6 +42,6 @@
   
 
    mysqli_close($conexao_bd);
-   header("location:pessoas_list.php");
+   //header("location:pessoas_list.php");
    
 ?>
