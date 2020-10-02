@@ -154,7 +154,7 @@
     mysqli_close($conexao_bd);
     ?>
     <script type="text/javascript">
-      function excluirPessoas($idPessoa){
+      function excluirPessoas(idPessoa){
         /*
         var resp = confirm('Deseja realmente excluir este usuário?');
         if(resp == true){
@@ -172,7 +172,7 @@
           cancelButtonText: 'NÃO'
         }).then((result) => {
           if (result.value) {
-            window.location.href = "pessoas_excluir.php?idPessoa=" + $idPessoa;
+            window.location.href = "pessoas_excluir.php?idPessoa=" + idPessoa;
           }
         })
       }
