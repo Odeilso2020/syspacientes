@@ -10,11 +10,11 @@
    $tipoAcesso   = $_SESSION["tipo_acesso"];    
    $nome_usuario = "";
    
-   /*$sql = "SELECT nome FROM usuarios WHERE id = ".$id_usuario;
+   $sql = "SELECT nome FROM usuarios WHERE id = ".$id_usuario;
    $resp = mysqli_query($conexao_bd, $sql);
    if($rows=mysqli_fetch_row($resp)){
       $nome_usuario = $rows[0];
-   }*/
+   }
 
    //verificar se o parametro de id de edição está vazio:   
    if(strlen($idUsuario)==0) 
@@ -34,7 +34,7 @@
 
    if($idPessoa != 0){
       $sql = "SELECT u.nome, u.endereco, u.numero, u.complemento, u.cidade, u.estado, u.cep, u.datanascimento, u.telefone, u.celular, u.email  
-               * FROM pessoas 
+              FROM pessoas 
               WHERE u.idPessoa = " . $idPessoa;
       $resp = mysqli_query($conexao_bd, $sql);
       if($rows=mysqli_fetch_row($resp)){
