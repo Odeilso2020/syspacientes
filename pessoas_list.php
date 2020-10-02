@@ -128,7 +128,7 @@
                      if($tipoAcesso == 1){
                         echo("<a class='btn btn-lg btn-success' href='pessoas.php?idPessoa=$idPessoa' role='button'>Editar</a>&nbsp;");
                         //if($idPessoa != $id_usuario)
-                          echo("<a class='btn btn-lg btn-danger'  href='javascript:excluirPessoas($idPessoa)' role='button'>Excluir</a>");                    
+                        echo("<a class='btn btn-lg btn-danger'  href='javascript:excluirPessoas($idPessoa)' role='button'>Excluir</a>");                    
                      }else{
                        echo("-");
                      }
@@ -162,7 +162,7 @@
         }
         */
         Swal.fire({
-          title: 'Deseja realmente exluir?',
+          title: 'Deseja realmente exluir?'+idPessoa,
           text: "Você deseja realmente excluir esta pessoa!",
           icon: 'warning',
           showCancelButton: true,
