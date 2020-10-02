@@ -16,7 +16,7 @@
    $celular     = $_POST["inputCelular"];  
    $emailPessoa = $_POST["inputEmail"];
 
-   /*if($idPessoa != 0){
+   if($idPessoa != 0){
          //atualizar
          $sql = "UPDATE pessoas SET 
                   nome = '$nome', 
@@ -31,10 +31,10 @@
                   celular = '$celular',
                   email = '$email'
                  WHERE id = $idPessoa";
-      } else {*/
+      } else {
          $sql = "INSERT INTO pessoas( nome, endereco, numero, complemento, cidade, estado, cep, datanascimento, telefone, celular, email)
          VALUES('$idPessoa', '$endereco', '$numero','$complemento', '$cidade', '$estado',  '$cep', '$datanasc', '$telefone', '$celular', '$emailPessoa')";
-     //}
+     }
       
       mysqli_query($conexao_bd, $sql);
   
