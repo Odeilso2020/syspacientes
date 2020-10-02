@@ -15,5 +15,6 @@
       // erro
    }
    mysqli_close($conexao_bd);
-   header("location:pessoas_list.php");
+   echo($idPessoa);
+   //header("location:pessoas_list.php");
 ?>
