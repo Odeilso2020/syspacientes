@@ -19,7 +19,7 @@
    if($idPessoa != 0){
          //atualizar
          $sql = "UPDATE pessoas SET 
-                  nome = '$nome', 
+                  nome = '$nomePessoa', 
                   endereco = '$endereco',
                   numero = '$numero',
                   complemento = '$complemento',
@@ -29,7 +29,7 @@
                   datanascimento = '$datanasc',
                   telefone = '$telefone',
                   celular = '$celular',
-                  email = '$email'
+                  email = '$emailPessoa'
                  WHERE idPessoa = ". $idPessoa;  
             echo("entrou");
             echo($idPessoa);
