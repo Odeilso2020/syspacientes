@@ -15,7 +15,7 @@
    if($rows=mysqli_fetch_row($resp)){
       $nome_usuario = $rows[0];
    }
-
+ 
    //verificar se o parametro de id de edição está vazio:   
    if(strlen($idPessoa)==0) 
       $idPessoa = 0;
