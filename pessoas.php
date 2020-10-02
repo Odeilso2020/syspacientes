@@ -37,6 +37,7 @@
               FROM pessoas 
               WHERE idPessoa = " . $idPessoa;
       $resp = mysqli_query($conexao_bd, $sql);
+      
       if($rows=mysqli_fetch_row($resp)){
          $nomePessoa  = $rows[0]; 
          $endereco    = $rows[1]; 
