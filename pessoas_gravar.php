@@ -30,7 +30,7 @@
                   telefone = '$telefone',
                   celular = '$celular',
                   email = '$email'
-                 WHERE idPessoa = ". $idPessoa;
+                 WHERE idPessoa = ". $idPessoa;  
             echo("entrou");
             echo($idPessoa);
       } else {
