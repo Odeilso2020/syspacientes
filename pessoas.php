@@ -114,7 +114,7 @@
          //}else{
            // echo("<h1>Cadastro de nova Pessoa:</h1>");
         // }
-        ?>-->
+        ?>
         <form
             method="post"
             action="pessoas_gravar.php">
