@@ -3,7 +3,7 @@
    require_once('variaveis.php');
    require_once('conexao.php');
 
-   $idPessoa    = $_POST["inputIdPessoa"];
+   $idPessoa    = $_GET["inputIdPessoa"];
    $nomePessoa  = $_POST["inputNomePessoa"];
    $endereco    = $_POST["inputEndereco"];
    $numero      = $_POST["inputNumero"];
