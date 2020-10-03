@@ -10,6 +10,8 @@
    $tipoAcesso   = $_SESSION["tipo_acesso"];    
    $nome_usuario = "";
    
+  
+
    $sql = "SELECT nome FROM usuarios WHERE id = ".$id_usuario;
    $resp = mysqli_query($conexao_bd, $sql);
    if($rows=mysqli_fetch_row($resp)){
@@ -116,12 +118,26 @@
            // echo("<h1>Cadastro de nova Pessoa:</h1>");
         // }
         ?>
+         <!----------------------------------------------------------------------------------------------->
+            <script language="JavaScript">
+            function mascara(t, mask){
+            var i = t.value.length;
+            var saida = mask.substring(1,0);
+            var texto = mask.substring(i)
+            if (texto.substring(0,1) != saida){
+            t.value += texto.substring(0,1);
+            }
+            }
+            </script>
+         <!----------------------------------------------------------------------------------------------->
+
         <form
             method="post"
             action="pessoas_gravar.php">
             <div class="form-group">
                <label for="inputNomePessoa">Nome da pessoa:</label>
-               <input type="text" class="form-control" id="inputNomePessoa" name="inputNomePessoa" placeholder="Nome do usuário" value="<?php echo($nomePessoa); ?>">
+               <input type="text" class="form-control" id="inputNomePessoa" name="inputNomePessoa" placeholder="Nome do usuário" maxlength="100" value="<?php echo($nomePessoa); ?>">
+                
             </div>
             <div class="form-group">
                <label for="inputEndereco">Endereço:</label>
@@ -129,7 +145,7 @@
             </div>
             <div class="form-group">
                <label for="inputNumero">Numero</label>
-               <input type="text" class="form-control" id="inputNumero" name="inputNumero" placeholder="Numero da residência" value="<?php echo($numero);?>">
+               <input type="number" class="form-control" id="inputNumero" name="inputNumero" placeholder="Numero da residência" value="<?php echo($numero);?>">
             </div>
             <div class="form-group">
                <label for="inputComplemento">Complemento</label>
@@ -145,7 +161,7 @@
             </div>
             <div class="form-group">
                <label for="inputCep">Cep</label>
-               <input type="text" class="form-control" id="inputCep" name="inputCep" placeholder="CEP" value="<?php echo($cep);?>">
+               <input type="text" class="form-control" id="inputCep" name="inputCep" onkeypress="mascara(this, '#####-###')" maxlength="9" value="<?php echo($cep);?>">
             </div>
             <div class="form-group">
                <label for="inputData">Data Nascimento</label>
@@ -153,11 +169,11 @@
             </div>
             <div class="form-group">
                <label for="inputTelefone">Telefone</label>
-               <input type="text" class="form-control" id="inputTelefone" name="inputTelefone" placeholder="Telefone" value="<?php echo($telefone);?>">
+               <input type="number" class="form-control" id="inputTelefone" name="inputTelefone" placeholder="Telefone" value="<?php echo($telefone);?>">
             </div>
             <div class="form-group">
                <label for="inputCelular">Celular</label>
-               <input type="text" class="form-control" id="inputCelular" name="inputCelular" placeholder="Celular.." value="<?php echo($celular);?>">
+               <input type="number" class="form-control" id="inputCelular" name="inputCelular" placeholder="Celular.." value="<?php echo($celular);?>">
             </div>
             <div class="form-group">
                <label for="inputEmail">Email</label>
