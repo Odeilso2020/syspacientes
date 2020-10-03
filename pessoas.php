@@ -155,7 +155,7 @@
             </div>
             <div class="form-group">
                <label for="inputEstado">Estado</label>
-               <input type="text" class="form-control" id="inputEstado" name="inputEstado" placeholder="Estado" value="<?php echo($estado);?>">
+               <input type="text" class="form-control" id="inputEstado" name="inputEstado" placeholder="Estado" maxlength="2" value="<?php echo($estado);?>">
             </div>
             <div class="form-group">
                <label for="inputCep">Cep</label>
