@@ -3,7 +3,7 @@
                   "192.168.0.109",
                   "root",
                   "123odeilso@",
-                  "syspacientes");
+                  "syspacientes"); 
    if(!$conexao_bd){
       echo "Não foi possível conectar no banco de dados: ";
       exit;
