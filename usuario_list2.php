@@ -141,8 +141,8 @@
     <script type="text/javascript">
       function excluirUsuario(id){
         /*
-        var resp = confirm('Deseja realmente excluir este usuário?');
-        if(resp == true){
+          var resp = confirm('Deseja realmente excluir este usuário?');
+          if(resp == true){
           window.location.href = "usuario_excluir.php?idUsuario=" + id;
         }
         */

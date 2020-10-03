@@ -31,7 +31,7 @@
     <link rel="icon" href="img/favicon/favicon2.ico">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+  
     <!-- Custom styles for this template -->
     <link href="css/login.css" rel="stylesheet">
     <script type="text/javascript">
@@ -54,7 +54,6 @@
           method="post"
           action="redirect.php"
           >
-          <!--onsubmit="return validaTela()"-->
           
       <img class="mb-4" src="img/login.png" alt="" width="80" height="80">
       <h1 class="h3 mb-3 font-weight-normal">Insira suas credenciais</h1>

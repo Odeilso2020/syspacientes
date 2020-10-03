@@ -25,7 +25,7 @@
       }
       mysqli_query($conexao_bd, $sql);
    }else{
-         //erro!
+         //erro
    }
    mysqli_close($conexao_bd);
    header("location:usuario_list2.php");

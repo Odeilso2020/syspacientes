@@ -2,7 +2,7 @@
    session_start();
    require_once('variaveis.php');
    require_once('conexao.php');
-
+ 
    //$id_usuario = $_GET["id_usuario"];
    
    //recuperando dados da sessao
@@ -18,7 +18,7 @@
    $resp = mysqli_query($conexao_bd, $sql);
    if($rows=mysqli_fetch_row($resp)){
       $nome_usuario = $rows[0];
-   }   
+   }  
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

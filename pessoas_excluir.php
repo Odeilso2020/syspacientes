@@ -4,7 +4,6 @@
    require_once('conexao.php');
 
    $idPessoa = $_GET['idPessoa'];
-
     
    //echo $idPessoa;
    if(strlen($idPessoa) > 0){
@@ -12,7 +11,7 @@
       mysqli_query($conexao_bd, $sql);
    }
    else{
-      // erro
+      //erro
    }
    mysqli_close($conexao_bd);
    header("location:pessoas_list.php");

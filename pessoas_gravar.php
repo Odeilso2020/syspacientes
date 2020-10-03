@@ -40,7 +40,7 @@
       
       mysqli_query($conexao_bd, $sql);
    }else{
-      //erro!
+      //erro
    }
 
    mysqli_close($conexao_bd);

@@ -163,8 +163,6 @@
       </div>
     </div>
 
-
-
 </body>
 <?php
 //encerrando a conexao com mysql

@@ -95,7 +95,7 @@
     <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-1.12.4.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
     <?php
-    mysqli_close($conexao_bd);
+       mysqli_close($conexao_bd);
     ?>
 </body>
 </html>

@@ -39,10 +39,6 @@
 
    //exibir ou retornar:
    if($validou){
-      /*echo "<hr>";
-      echo "E-mail: " . $email."<br>";
-      echo "Senha: ".$senha;
-      */
       $_SESSION["id_usuario"]  = $id_usuario;
       $_SESSION["tipo_acesso"] = $tipo_acesso;
       header("location:admin.php");

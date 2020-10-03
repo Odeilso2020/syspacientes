@@ -125,9 +125,6 @@
                      $celular     = $rows[10];
                      $email       = $rows[11];
 
-
-
-
                      echo("<tr>");
                      echo("<th scope='row'>$idPessoa</th>");
                      echo("<td>$nome</td>");
