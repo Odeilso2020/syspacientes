@@ -73,7 +73,7 @@
                   <?php echo($nome_usuario); ?>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdown10">
-                <a class="dropdown-item" href="minhaconta.php">Minha conta</a>
+                <a class="dropdown-item" href="#">Minha conta</a>
                 <a class="dropdown-item" href="logout.php">Sair</a>                 
               </div>
             </li>
