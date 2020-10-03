@@ -42,7 +42,7 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container container-fluid" >
 
       <!-- Static navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
@@ -86,7 +86,7 @@
       </nav>
 
       <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
+      <div class="jumbotron jumbotron-fluid">
         <h1>Lista de Pessoas</h1>
         <hr>
         <table class="table">
@@ -95,39 +95,56 @@
                   <th scope="col">ID</th>
                   <th scope="col">NOME</th>
                   <th scope="col">ENDEREÇO</th>
-                  <th scope="col">NÚMERO</th>
-                  <th scope="col">EMAIL</th>
-                 <!-- <th scope="col">COMPLEMENTO</th>
+                  <th scope="col">Nº</th>
+                  <th scope="col">COMPLEMENTO</th>
                   <th scope="col">CIDADE</th>
                   <th scope="col">ESTADO</th>
                   <th scope="col">CEP</th>
-                  <th scope="col">DATA NASCIMENTO</th>
-                  <th scope="col">TELEFONE</th>
-                  <th scope="col">CELULAR</th>
-                  <th scope="col">E-MAIL</th>
-                  <th scope="col">...</th>-->
+                  <th scope="col">DATA</th>
+                  <!--<th scope="col">TEL</th>-->
+                  <th scope="col">CEL</th>
+                  <th scope="col">EMAIL</th>
+                  <th scope="col">...</th>
                </tr>
             </thead>
             <tbody>
                <?php
-                  $sql = "SELECT idPessoa, nome, endereco, numero, email FROM pessoas ORDER BY idPessoa";
+                  $sql = "SELECT  *FROM pessoas ORDER BY idPessoa";
                   $resp = mysqli_query($conexao_bd, $sql);
                   while($rows=mysqli_fetch_row($resp)){
-                     $idPessoa = $rows[0];
-                     $nome     = $rows[1];
-                     $endereco = $rows[2];
-                     $numero   = $rows[3];
-                     $email    = $rows[4];
+                     $idPessoa    = $rows[0];
+                     $nome        = $rows[1];
+                     $endereco    = $rows[2];
+                     $numero      = $rows[3];
+                     $complemento = $rows[4];
+                     $cidade      = $rows[5];
+                     $estado      = $rows[6];
+                     $cep         = $rows[7];
+                     $data        = $rows[8];
+                     $telefone    = $rows[9];
+                     $celular     = $rows[10];
+                     $email       = $rows[11];
+
+
+
+
                      echo("<tr>");
                      echo("<th scope='row'>$idPessoa</th>");
                      echo("<td>$nome</td>");
                      echo("<td>$endereco</td>");
                      echo("<td>$numero</td>");
+                     echo("<td>$complemento</td>");
+                     echo("<td>$cidade</td>");
+                     echo("<td>$estado</td>");
+                     echo("<td>$cep</td>");
+                     echo("<td>$data</td>");
+                     //echo("<td>$telefone</td>");
+                     echo("<td>$celular</td>");
                      echo("<td>$email</td>");
                      echo("<td>");
                      if($tipoAcesso == 1){
                         echo("<a class='btn btn-lg btn-success' href='pessoas.php?idPessoa=$idPessoa' role='button'>Editar</a>&nbsp;");
-                        //if($idPessoa != $id_usuario)
+                        
                         echo("<a class='btn btn-lg btn-danger'  href='javascript:excluirPessoas($idPessoa)' role='button'>Excluir</a>");                    
                      }else{
                        echo("-");
@@ -155,12 +172,7 @@
     ?>
     <script type="text/javascript">
       function excluirPessoas(idPessoa){
-        /*
-        var resp = confirm('Deseja realmente excluir este usuário?');
-        if(resp == true){
-          window.location.href = "usuario_excluir.php?idUsuario=" + id;
-        }
-        */
+       
         Swal.fire({
           title: 'Deseja realmente exluir?',
           text: "Você deseja realmente excluir esta pessoa!",

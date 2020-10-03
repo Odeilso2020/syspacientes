@@ -109,15 +109,6 @@
         </div>
       </nav>
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-       <?php
-         //if($idUsuario != 0){
-           // echo("<h1>Editando a pessoa: $nomeUsuario</h1>");
-         //}else{
-           // echo("<h1>Cadastro de nova Pessoa:</h1>");
-        // }
-        ?>
          <!----------------------------------------------------------------------------------------------->
             <script language="JavaScript">
             function mascara(t, mask){
