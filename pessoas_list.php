@@ -42,7 +42,7 @@
 </head>
 <body>
 
-    <div class="container" >
+    <div class="container-fluid">
 
       <!-- Static navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
@@ -101,7 +101,7 @@
                   <th scope="col">ESTADO</th>
                   <th scope="col">CEP</th>
                   <th scope="col">DATA</th>
-                  <!--<th scope="col">TEL</th>-->
+                  <th scope="col">TEL</th>
                   <th scope="col">CEL</th>
                   <th scope="col">EMAIL</th>
                   <th scope="col">...</th>
@@ -138,7 +138,7 @@
                      echo("<td>$estado</td>");
                      echo("<td>$cep</td>");
                      echo("<td>$data</td>");
-                     //echo("<td>$telefone</td>");
+                     echo("<td>$telefone</td>");
                      echo("<td>$celular</td>");
                      echo("<td>$email</td>");
                      echo("<td>");

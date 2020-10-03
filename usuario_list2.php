@@ -41,7 +41,7 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container-fluid">
 
       <!-- Static navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
