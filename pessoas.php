@@ -67,7 +67,7 @@
    <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-   <div class="container-fluid">
+   <div class="container">
       <!-- Static navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
         <a class="navbar-brand" href="admin.php">SysPacientes</a>
