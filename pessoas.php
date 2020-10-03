@@ -131,7 +131,7 @@
             </script>
          <!----------------------------------------------------------------------------------------------->
 
-        <form
+        <form>
             method="post"
             action="pessoas_gravar.php">
             <div class="form-group">
