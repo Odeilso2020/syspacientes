@@ -161,7 +161,7 @@
             </div>
             <div class="form-group">
                <label for="inputCep">Cep</label>
-               <input type="text" class="form-control" id="inputCep" name="inputCep" onkeypress="mascara(this, '#####-###')" maxlength="9" value="<?php echo($cep);?>">
+               <input type="text" class="form-control" id="inputCep" name="inputCep" onkeypress="mascara(this, '##.###-###')" maxlength="9" value="<?php echo($cep);?>">
             </div>
             <div class="form-group">
                <label for="inputData">Data Nascimento</label>
@@ -169,11 +169,11 @@
             </div>
             <div class="form-group">
                <label for="inputTelefone">Telefone</label>
-               <input type="number" class="form-control" id="inputTelefone" name="inputTelefone" placeholder="Telefone" value="<?php echo($telefone);?>">
+               <input type="text" class="form-control" id="inputTelefone" name="inputTelefone" placeholder="Telefone" value="<?php echo($telefone);?>">
             </div>
             <div class="form-group">
                <label for="inputCelular">Celular</label>
-               <input type="number" class="form-control" id="inputCelular" name="inputCelular" placeholder="Celular.." value="<?php echo($celular);?>">
+               <input type="text" class="form-control" id="inputCelular" name="inputCelular" placeholder="Celular.." value="<?php echo($celular);?>">
             </div>
             <div class="form-group">
                <label for="inputEmail">Email</label>
