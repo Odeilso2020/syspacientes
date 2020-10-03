@@ -113,7 +113,7 @@
             if($idPessoa != 0){
             echo("<h1>Editando o usuário: $nomePessoa</h1>");
          }else{
-            echo("<h1>Cadastro de nova Pessoa:</h1>");
+            echo("<h1>Cadastro de nova Pessoa</h1>");
          }
         ?>
          <!----------------------------------------------------------------------------------------------->
