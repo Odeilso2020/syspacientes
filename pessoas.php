@@ -161,7 +161,7 @@
             </div>
             <div class="form-group">
                <label for="inputCep">Cep</label>
-               <input type="text" class="form-control" id="inputCep" name="inputCep" onkeypress="mascara(this, '##.###-###')" maxlength="9" value="<?php echo($cep);?>">
+               <input type="text" class="form-control" id="inputCep" name="inputCep" onkeypress="mascara(this, '#####-###')" maxlength="9" value="<?php echo($cep);?>">
             </div>
             <div class="form-group">
                <label for="inputData">Data Nascimento</label>
